@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <title>OneClick - Watch TV Shows Online, Watch Movies Online</title>
+</head>
+
+<body>
+  <div id="header_outer" class="header">
+    <div class="header-left">
+      <a href="index.html"><img src="./image/logomain.png" alt="" /></a>
+    </div>
+    <div class="header-mid">
+      <div class="selection" onclick=""><span>Home</span></div>
+      <div class="selection" onclick=""><span>Movies</span></div>
+      <div class="selection" onclick=""><span>Watched</span></div>
+    </div>
+    <div class="header-right">
+      <div class="searchbar">
+        <input type="checkbox" id="check" style="width: 50px; height: 50px;">
+        <div class="search-box">
+          <input type="text" placeholder="Type here..." id="searchInput">
+          <label for="check" class="icon">
+            <i class="fa-solid fa-magnifying-glass emoji"></i>
+          </label>
+        </div>
+      </div>
+      <div id="dropdownAccount" class="dropdown is-signin">
+        <button class="dropdown-account dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Hi Thịnh
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">Settings</a></li>
+          <li><a id="logoutBtn" class="dropdown-item" href="#">Log Out</a></li>
+        </ul>
+      </div>
+      <a id="signinBtnDropdown" class="is-signin " href="signin.html" style="text-decoration: none;">
+        <div class="sign-in_btn">
+          <p>Sign In</p>
+        </div>
+      </a>
+      <!-- <button type="button" class="btn btn-user" data-bs-toggle="modal" data-bs-target="#sign-up">
+        <i class="fa-solid fa-user"></i>
+      </button> -->
+    </div>
+  </div>
+
+  <div class="slide_container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <!-- <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div> -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://media-cdn-v2.laodong.vn/storage/newsportal/2022/6/29/1062053/Can-Moc-1-Ty-Usd-Top.jpeg"
+            class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h1 class="animate__animated animate__zoomIn">TOP GUN: MAVERICK</h1>
+            <div class="carousel-movie_outer  d-none d-md-block">
+              <div class="carousel-movie_inner animate__animated animate__fadeInLeft">
+                <p>By Joseph Kosinski</p>
+              </div>
+              <div class="carousel-movie_inner animate__animated animate__fadeInUp">
+                <p>2022</p>
+              </div>
+              <div class="carousel-movie_inner animate__animated animate__fadeInRight">
+                <p>2h 10m</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-decor">
+            <h3>WHAT'S ON THE SCREEN?</h3>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+            <i class="fa-solid fa-arrow-left-long"></i>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+            <i class="fa-solid fa-arrow-right-long"></i>
+            <span class="visually-hidden">Next</span>
+          </button>
+          <div class="carousel-watch_btn">
+            <p>Watch Now</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/e4058f59786659.5a2f714d3b929.jpg"
+            class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h1 class="animate__animated animate__zoomIn">STAR WARS: THE LAST JEDI</h1>
+            <div class="carousel-movie_outer  d-none d-md-block">
+              <div class="carousel-movie_inner animate__animated animate__fadeInLeft">
+                <p>By Rian Johnson</p>
+              </div>
+              <div class="carousel-movie_inner animate__animated animate__fadeInUp">
+                <p>2017</p>
+              </div>
+              <div class="carousel-movie_inner animate__animated animate__fadeInRight">
+                <p>2h 32m</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-decor">
+            <h3>WHAT'S ON THE SCREEN?</h3>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+            <i class="fa-solid fa-arrow-left-long"></i>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+            <i class="fa-solid fa-arrow-right-long"></i>
+            <span class="visually-hidden">Next</span>
+          </button>
+          <div class="carousel-watch_btn">
+            <p>Watch Now</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://i0.wp.com/www.techsignin.com/wp-content/uploads/2021/08/netflix-poster-squid-game-tro-choi-con-muc-3.jpeg?resize=1920%2C1012&ssl=1"
+            class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h1 class="animate__animated animate__zoomIn">SQUID GAME</h1>
+            <div class="carousel-movie_outer  d-none d-md-block">
+              <div class="carousel-movie_inner animate__animated animate__fadeInLeft">
+                <p>By Hwang Dong-hyuk</p>
+              </div>
+              <div class="carousel-movie_inner animate__animated animate__fadeInUp">
+                <p>2021</p>
+              </div>
+              <div class="carousel-movie_inner animate__animated animate__fadeInRight">
+                <p>1 Season</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-decor">
+            <h3>WHAT'S ON THE SCREEN?</h3>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+            <i class="fa-solid fa-arrow-left-long"></i>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+            <i class="fa-solid fa-arrow-right-long"></i>
+            <span class="visually-hidden">Next</span>
+          </button>
+          <div class="carousel-watch_btn">
+            <p>Watch Now</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content" style="height: 100vh;"></div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script type="module" src="./js/index.js"></script>
+<script type="module" src="./js/main.js"></script>
+</html>
