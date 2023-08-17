@@ -12,24 +12,30 @@ signInBtn.addEventListener("click", (e) => {
   e.preventDefault();
   var emailValueSI = signInEmail.value;
   var passwordValueSI = signInPass.value;
-  const f1 = new Toasty(toastHTMLElement, toastContent);
+  const signInToast = new Toasty(toastHTMLElement, toastContent);
   if (
     signInEmail.value.trim().length == 0 ||
     signInPass.value.trim().length == 0
   ) {
-    f1.showAlert("Không được để trống!", "red");
+    signInToast.showAlert("Something still empty :(", "red");
   } else {
     signInWithEmailAndPassword(auth, emailValueSI, passwordValueSI)
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        window.location.href = 'index.html'
-        // ...
+        async function signIn() {
+          signInToast.showAlert("Login Successful!", "green")
+          await new Promise(resolve => setTimeout(resolve, 1000)); 
+          window.location.href = 'index.html'
+
+        }
+        signIn();
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        f1.showAlert("Email/Password không chính xác", "red")
+        console.log(errorMessage)
+        signInToast.showAlert("Email/Password is incorrect :(", "red")
       });
   }
 });

@@ -1,6 +1,7 @@
 import {
   getAuth,
   createUserWithEmailAndPassword,
+  updateProfile
 } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
 
 import Toasty from "./toast.js";
@@ -21,37 +22,50 @@ signUpBtn.addEventListener("click", (e) => {
   let vietThuong = /[a-z]/g;
   let vietHoa = /[A-Z]/g;
   let chuSo = /[0-9]/g;
-  const t1 = new Toasty(toastHTMLElement, toastContent);
+  const signUpToast = new Toasty(toastHTMLElement, toastContent);
   if (
     signUpUsername.value.trim().length == 0 ||
     signUpEmail.value.trim().length == 0 ||
     signUpPass.value.trim().length == 0 ||
     signUpConfirmPassword.value.trim().length == 0
   ) {
-    t1.showAlert("Không được để trống!", "red");
+    signUpToast.showAlert("Something still empty :(", "red");
   } else if (signUpPass.value.trim().length < 8) {
-    t1.showAlert("Mật khẩu phải có ít nhất 8 kí tự!", "red");
+    signUpToast.showAlert("Password must be at least 8 characters :(", "red");
   } else if (!signUpPass.value.trim().match(vietThuong)) {
-    t1.showAlert("Mật khẩu phải có ít nhất 1 kí tự viết thường!", "red")
+    signUpToast.showAlert("Password must have at least 1 lowercase character :(", "red")
   } else if (!signUpPass.value.trim().match(vietHoa)) {
-    t1.showAlert("Mật khẩu phải có ít nhất 1 kí tự viết in hoa!", "red")
+    signUpToast.showAlert("Password must have at least 1 uppercase character :(", "red")
   } else if (!signUpPass.value.trim().match(chuSo)) {
-    t1.showAlert("Mật khẩu phải có ít nhất 1 kí tự chữ số!", "red")
+    signUpToast.showAlert("Password must have at least 1 alphanumeric character :(", "red")
   } else if (signUpPass.value.trim() != signUpConfirmPassword.value.trim()) {
-    t1.showAlert("Mật khẩu không khớp!", "red")
+    signUpToast.showAlert("Password isn't match :(", "red")
   } else {
     createUserWithEmailAndPassword(auth, emailValueSU, passwordValueSU)
       .then((userCredential) => {
         // Signed in
         var user = userCredential.user;
-        t1.showAlert("Đăng ký thành công!", "green")
-        // ...
+        updateProfile(auth.currentUser, {
+          displayName: signUpUsername.value
+        }).then(() => {
+          async function signUp() {
+            signUpToast.showAlert("Register Successful!", "green")
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            window.location.href = 'signin.html'
+          }
+          signUp();
+        }).catch((error) => {
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          console.log(errorMessage);
+          signUpToast.showAlert("Something went wrong when update :(", "red")
+        });
       })
       .catch((error) => {
         var errorCode = error.code;
         var errorMessage = error.message;
-        t1.showAlert("Đã xảy ra lỗi!", "red")
-        // console.log(errorMessage);
+        signUpToast.showAlert("Something went wrong :(", "red")
+        console.log(errorMessage);
         // ..
       });
   }

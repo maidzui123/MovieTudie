@@ -24,7 +24,7 @@ body {
 }
 
 .scroll-active {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .header {
@@ -41,13 +41,12 @@ body {
   /* Ensure the header appears on top */
   transition: background-color 0.5s ease;
 }
-
+/* Navigation */
 .header-mid {
   width: 33.3%;
   display: flex;
   color: white;
   justify-content: center;
-  gap: 20px;
   text-align: center;
   height: 100%;
   align-items: center;
@@ -55,6 +54,8 @@ body {
 
 .header-mid .selection {
   display: flex;
+  width: 33.3%;
+  justify-content: center;
   align-items: center;
   padding: 0 8px;
   cursor: pointer;
@@ -62,10 +63,13 @@ body {
   margin: 0;
   height: 100%;
   border: 2px solid rgba(0, 0, 0, 0.0);
+  transition: 0.5s;
 }
 
 .selection:hover {
   border-bottom: 2px solid #ccc;
+  border-top: 0;
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
 }
 
 .header-left {
@@ -195,8 +199,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 150px;
-  height: 50px;
+  height: 51px;
+  padding: 0px 15px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
   border: #ccc 1px solid;
   color: #ccc;
@@ -211,37 +215,14 @@ body {
 .dropdown-account:hover {
   background: rgb(204, 204, 204, 0.2);
 }
+
 .dropdown-account:focus {
   background: rgb(204, 204, 204, 0.2);
   outline: none;
 }
 
-.modal-footer p {
-  font-size: 12px;
-  margin-right: 54px;
-}
-
-.modal-footer p span {
-  color: blue;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.btn-user,
-.btn-cart {
-  width: 40px;
-  height: 40px;
-  background-color: black;
-  border-radius: 100px;
-  padding: 5px;
-  color: #f5f5f5;
-  border: none;
-}
-
-.btn-user:hover,
-.btn-cart:hover {
-  background-color: #e5e5e5;
-  color: black;
+.dropdown-item i {
+  margin-right: 10px;
 }
 
 /* Slider CSS */
@@ -267,6 +248,13 @@ body {
 
 .carousel-item {
   height: 100%;
+  overflow: hidden;
+}
+
+.carousel-item video {
+  height: 100%;
+  width: 100%;
+  transform: scale(1.45);
 }
 
 .carousel-caption {
@@ -294,6 +282,7 @@ body {
   z-index: 2;
   text-align: center;
 }
+
 .carousel-decor h3 {
   color: #FFF;
   font-size: 20px;
@@ -301,6 +290,7 @@ body {
   font-family: 'Figtree', sans-serif;
   letter-spacing: 5px;
 }
+
 .carousel-movie_outer {
   width: 100%;
   display: flex !important;
@@ -312,7 +302,7 @@ body {
 
 .carousel-movie_inner {
   padding: 10px;
-  border: #ccc 1px solid;
+  border: #FFF 1px solid;
   color: #FFF;
   border-radius: 15px;
   text-align: center;
@@ -327,11 +317,13 @@ body {
   position: absolute;
   width: 100px;
   height: 50px;
-  border: #ccc 1px solid;
+  border: #999 1px solid;
+  color: #999;
   top: 85%;
+  opacity: 1;
   left: 80px;
   border-radius: 15px;
-  z-index: 3;
+  z-index: 4;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 }
 
@@ -339,36 +331,56 @@ body {
   position: absolute;
   width: 100px;
   height: 50px;
-  border: #ccc 1px solid;
+  border: #999 1px solid !important;
+  color: #999;
+  opacity: 1;
   top: 85%;
   left: 190px;
   border-radius: 15px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 }
-.carousel-control-next:hover, .carousel-control-prev:hover {
+
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
   background: rgb(204, 204, 204, 0.2);
 }
+
 .carousel-watch_btn {
   position: absolute;
   padding: 10px 40px;
   height: 50px;
-  border: #ccc 1px solid;
+  border: #999 1px solid;
   top: 85%;
   right: 80px;
   border-radius: 15px;
-  color: #ccc;
+  color: #999;
   font-weight: 500;
   z-index: 3;
+  background: rgb(204, 204, 204, 0.1);
   transition: 0.5s;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 .carousel-watch_btn:hover {
-  background: rgb(204, 204, 204, 0.2);
+  background: rgb(255, 255, 255, 0.4);
   color: #FFF;
   cursor: pointer;
 }
 
 .carousel-watch_btn p {
   margin: 0;
+}
+
+/* TV Shows */
+.tvshows-outer {
+  height: 100vh;
+  width: 100%;
+  background: red;
+}
+
+/* Movies */
+.movies-outer {
+  height: 100vh;
+  width: 100%;
+  background: blue;
 }
