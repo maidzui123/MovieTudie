@@ -5,7 +5,10 @@ body {
   font-family: 'Quicksand', sans-serif;
   font-size: 18px;
 }
-
+a {
+  text-decoration: none;
+  color: #F5f5f5;
+}
 .carousel {
   position: relative;
 }
@@ -41,6 +44,7 @@ body {
   /* Ensure the header appears on top */
   transition: background-color 0.5s ease;
 }
+
 /* Navigation */
 .header-mid {
   width: 33.3%;
@@ -226,7 +230,7 @@ body {
 }
 
 /* Slider CSS */
-.slide_container {
+.web_container {
   scroll-behavior: auto;
 }
 
@@ -375,7 +379,8 @@ body {
 .tvshows-outer {
   height: 100vh;
   width: 100%;
-  background: red;
+  background: #000;
+  padding-top: 80px;
 }
 
 /* Movies */
