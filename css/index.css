@@ -383,6 +383,35 @@ a {
   padding-top: 80px;
 }
 
+.tvshows-toptrend_wrapper {
+  width: 1400px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+
+.tvshows-toptrend_wrapper .tvshows-toptrend_item_outer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
+  padding: 10px;
+  flex: none;
+}
+.tvshows-toptrend_item_outer .tvshows-toptrend_item {
+  background: wheat;
+  width:100%;
+  transition: transform 0.5s;
+  filter: grayscale(100%);
+}
+.tvshows-toptrend_item_outer .tvshows-toptrend_item:hover {
+  filter: grayscale(0);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.tvshows-toptrend_wrapper::-webkit-scrollbar {
+  display: none;
+}
 /* Movies */
 .movies-outer {
   height: 100vh;
