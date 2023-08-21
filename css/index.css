@@ -5,10 +5,16 @@ body {
   font-family: 'Quicksand', sans-serif;
   font-size: 18px;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
   color: #F5f5f5;
 }
+
 .carousel {
   position: relative;
 }
@@ -377,40 +383,113 @@ a {
 
 /* TV Shows */
 .tvshows-outer {
-  height: 100vh;
+  position: relative;
+  height: 100%;
   width: 100%;
-  background: #000;
-  padding-top: 80px;
+  background: url(../image/bgtvshows.jpg);
+  padding: 80px 50px;
+  color: #FFF;
+}
+.tvshows-inner::after {
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: inset 0 0 20rem rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: 0;
+
 }
 
+.tvshows-inner {
+  height: 100% !important;
+}
+.tvshows-toptrend_outer {
+  position: relative;
+  z-index: 10;
+}
 .tvshows-toptrend_wrapper {
-  width: 1400px;
+  width: 100%;
   display: flex;
   flex-wrap: nowrap;
   overflow-x: scroll;
+}
+
+.tvshows-toptrend_header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tvshows-toptrend_btn button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #3a383d;
+  color: #FFF;
+  border: 1px #3a383d solid;
+}
+
+.tvshows-toptrend_btn button:hover {
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .tvshows-toptrend_wrapper .tvshows-toptrend_item_outer {
   width: 100%;
   display: grid;
   grid-template-columns: auto auto auto auto;
-  grid-gap: 20px;
-  padding: 10px;
+  grid-gap: 15px;
+  margin: 10px 0;
   flex: none;
 }
+
 .tvshows-toptrend_item_outer .tvshows-toptrend_item {
-  background: wheat;
-  width:100%;
+  background: rgb(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  width: 330px;
   transition: transform 0.5s;
-  filter: grayscale(100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 .tvshows-toptrend_item_outer .tvshows-toptrend_item:hover {
-  filter: grayscale(0);
   cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(1.01);
 }
+
 .tvshows-toptrend_wrapper::-webkit-scrollbar {
   display: none;
+}
+.tvshows-toptrend_img {
+  width: 300px;
+  margin-top: 10px;
+}
+.tvshows-toptrend_img img{
+  width: 100%;
+  border-radius: 10px;
+  aspect-ratio: 1;
+} 
+.tvshows-toptrend_info {
+  padding: 10px;
+}
+.tvshows-toptrend_info p {
+  color: #999;
+}
+.tvshows-toptrend_watchbtn {
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 10px;
+  color: #FFF;
+  background: #505068;
+  border: 1px #505068 solid;
+}
+.tvshows-toptrend_watchbtn:hover {
+  background: rgba(80, 80, 104, 0.8)
+
 }
 /* Movies */
 .movies-outer {

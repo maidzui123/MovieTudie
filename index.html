@@ -26,7 +26,7 @@
       <a href="index.html"><img src="./image/logomain.png" alt="" /></a>
     </div>
     <div class="header-mid">
-      <div class="selection" onclick=""><span>Home</span></div>
+      <a href="#" class="selection" onclick=""><span>Home</span></a>
       <a href="#tvShows" class="selection" onclick=""><span>TV Shows</span></a>
       <div class="selection" onclick=""><span>Movies</span></div>
       <div class="selection" onclick=""><span>My List</span></div>
@@ -210,50 +210,210 @@
       </div>
     </div>
     <div id="tvShows" class="tvshows-outer">
-      <h1>TV Shows</h1>
-      <!-- <div class="tvshows-toptrend_outer">
-        <h3>Now Trending</h3>
-        <div class="tvshows-toptrend_wrapper">
-          <div class="tvshows-toptrend_item">
-
+      <div class="tvshows-inner">
+        <div class="tvshows-toptrend_outer">
+          <h2>TV Shows</h2>
+          <div class="tvshows-toptrend_header">
+            <h4>Now Playing</h4>
+            <div class="tvshows-toptrend_btn">
+              <button id="moviePrev" class="" type="button">
+                <i class="fa-solid fa-chevron-left"></i>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button id="movieNext" class="" type="button">
+                <i class="fa-solid fa-chevron-right"></i>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <div class="tvshows-toptrend_wrapper">
+            <div id="tvshows-toptrend_item1" class="tvshows-toptrend_item_outer">
+              <div class="tvshows-toptrend_item">
+                <div class="tvshows-toptrend_img">
+                  <img src="./image/tvshows1.jpg" alt="">
+                </div>
+                <div class="tvshows-toptrend_info">
+                  <h5>The Uncanny Counter 2</h5>
+                  <p>2023</p>
+                </div>
+                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
+              </div>
+              <div class="tvshows-toptrend_item">
+                <div class="tvshows-toptrend_img">
+                  <img src="./image/tvshows1.jpg" alt="">
+                </div>
+                <div class="tvshows-toptrend_info">
+                  <h5>The Uncanny Counter 2</h5>
+                  <p>2023</p>
+                </div>
+                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
+              </div>
+              <div class="tvshows-toptrend_item">
+                <div class="tvshows-toptrend_img">
+                  <img src="./image/tvshows1.jpg" alt="">
+                </div>
+                <div class="tvshows-toptrend_info">
+                  <h5>The Uncanny Counter 2</h5>
+                  <p>2023</p>
+                </div>
+                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
+              </div>
+              <div class="tvshows-toptrend_item">
+                <div class="tvshows-toptrend_img">
+                  <img src="./image/tvshows1.jpg" alt="">
+                </div>
+                <div class="tvshows-toptrend_info">
+                  <h5>The Uncanny Counter 2</h5>
+                  <p>2023</p>
+                </div>
+                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
+              </div>
+            </div>
+            <div id="tvshows-toptrend_item2" class="tvshows-toptrend_item_outer">
+              <div class="tvshows-toptrend_item">
+                <div class="tvshows-toptrend_img">
+                  <img src="./image/tvshows1.jpg" alt="">
+                </div>
+                <div class="tvshows-toptrend_info">
+                  <h5>The Uncanny Counter 2</h5>
+                  <p>2023</p>
+                </div>
+                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
+              </div>
+              <div class="tvshows-toptrend_item">
+                <div class="tvshows-toptrend_img">
+                  <img src="./image/tvshows1.jpg" alt="">
+                </div>
+                <div class="tvshows-toptrend_info">
+                  <h5>The Uncanny Counter 2</h5>
+                  <p>2023</p>
+                </div>
+                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
+              </div>
+              <div class="tvshows-toptrend_item">
+                <div class="tvshows-toptrend_img">
+                  <img src="./image/tvshows1.jpg" alt="">
+                </div>
+                <div class="tvshows-toptrend_info">
+                  <h5>The Uncanny Counter 2</h5>
+                  <p>2023</p>
+                </div>
+                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
+              </div>
+              <div class="tvshows-toptrend_item">
+                <div class="tvshows-toptrend_img">
+                  <img src="./image/tvshows1.jpg" alt="">
+                </div>
+                <div class="tvshows-toptrend_info">
+                  <h5>The Uncanny Counter 2</h5>
+                  <p>2023</p>
+                </div>
+                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
+              </div>
+            </div>
           </div>
         </div>
-      </div> -->
-      
-      <div class="tvshows-toptrend_outer">
-        <h3>Comedy</h3>
-        <button id="moviePrev" class="" type="button">
-          <i class="fa-solid fa-arrow-left-long"></i>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button id="movieNext" class="" type="button">
-          <i class="fa-solid fa-arrow-right-long"></i>
-          <span class="visually-hidden">Next</span>
-        </button>
-        <div class="tvshows-toptrend_wrapper">
-          <div class="tvshows-toptrend_item_outer">
-            <div class="tvshows-toptrend_item">
-              movie-1
-            </div>
-            <div class="tvshows-toptrend_item">
-              movie-2
-            </div>
-            <div class="tvshows-toptrend_item">
-              movie-3
-            </div>
-            <div class="tvshows-toptrend_item">
-              movie-3
+
+
+
+        <div class="tvshows-toptrend_outer">
+          <div class="tvshows-toptrend_header">
+            <h4>Now Playing</h4>
+            <div class="tvshows-toptrend_btn">
+              <button id="moviePrev" class="" type="button">
+                <i class="fa-solid fa-chevron-left"></i>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button id="movieNext" class="" type="button">
+                <i class="fa-solid fa-chevron-right"></i>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
           </div>
-          <div class="tvshows-toptrend_item_outer">
-            <div class="tvshows-toptrend_item">
-              movie-4
+          <div class="tvshows-toptrend_wrapper">
+            <div id="tvshows-toptrend_item1" class="tvshows-toptrend_item_outer">
+              <div class="tvshows-toptrend_item">
+                <div class="tvshows-toptrend_img">
+                  <img src="./image/tvshows1.jpg" alt="">
+                </div>
+                <div class="tvshows-toptrend_info">
+                  <h5>The Uncanny Counter 2</h5>
+                  <p>2023</p>
+                </div>
+                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
+              </div>
+              <div class="tvshows-toptrend_item">
+                <div class="tvshows-toptrend_img">
+                  <img src="./image/tvshows1.jpg" alt="">
+                </div>
+                <div class="tvshows-toptrend_info">
+                  <h5>The Uncanny Counter 2</h5>
+                  <p>2023</p>
+                </div>
+                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
+              </div>
+              <div class="tvshows-toptrend_item">
+                <div class="tvshows-toptrend_img">
+                  <img src="./image/tvshows1.jpg" alt="">
+                </div>
+                <div class="tvshows-toptrend_info">
+                  <h5>The Uncanny Counter 2</h5>
+                  <p>2023</p>
+                </div>
+                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
+              </div>
+              <div class="tvshows-toptrend_item">
+                <div class="tvshows-toptrend_img">
+                  <img src="./image/tvshows1.jpg" alt="">
+                </div>
+                <div class="tvshows-toptrend_info">
+                  <h5>The Uncanny Counter 2</h5>
+                  <p>2023</p>
+                </div>
+                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
+              </div>
             </div>
-            <div class="tvshows-toptrend_item">
-              movie-5
-            </div>
-            <div class="tvshows-toptrend_item">
-              movie-6
+            <div id="tvshows-toptrend_item2" class="tvshows-toptrend_item_outer">
+              <div class="tvshows-toptrend_item">
+                <div class="tvshows-toptrend_img">
+                  <img src="./image/tvshows1.jpg" alt="">
+                </div>
+                <div class="tvshows-toptrend_info">
+                  <h5>The Uncanny Counter 2</h5>
+                  <p>2023</p>
+                </div>
+                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
+              </div>
+              <div class="tvshows-toptrend_item">
+                <div class="tvshows-toptrend_img">
+                  <img src="./image/tvshows1.jpg" alt="">
+                </div>
+                <div class="tvshows-toptrend_info">
+                  <h5>The Uncanny Counter 2</h5>
+                  <p>2023</p>
+                </div>
+                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
+              </div>
+              <div class="tvshows-toptrend_item">
+                <div class="tvshows-toptrend_img">
+                  <img src="./image/tvshows1.jpg" alt="">
+                </div>
+                <div class="tvshows-toptrend_info">
+                  <h5>The Uncanny Counter 2</h5>
+                  <p>2023</p>
+                </div>
+                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
+              </div>
+              <div class="tvshows-toptrend_item">
+                <div class="tvshows-toptrend_img">
+                  <img src="./image/tvshows1.jpg" alt="">
+                </div>
+                <div class="tvshows-toptrend_info">
+                  <h5>The Uncanny Counter 2</h5>
+                  <p>2023</p>
+                </div>
+                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
+              </div>
             </div>
           </div>
         </div>
@@ -278,4 +438,5 @@
 <script type="module" src="./js/index.js"></script>
 <script type="module" src="./js/main.js"></script>
 <script src="./js/scroll.js"></script>
+
 </html>
