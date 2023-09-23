@@ -25,34 +25,35 @@
     <div class="header-left">
       <a href="index.html"><img src="./image/logomain.png" alt="" /></a>
     </div>
-    <div class="header-mid">
-      <a href="#" class="selection" onclick=""><span>Home</span></a>
-      <a href="#tvShows" class="selection" onclick=""><span>TV Shows</span></a>
-      <div class="selection" onclick=""><span>Movies</span></div>
-      <div class="selection" onclick=""><span>My List</span></div>
+    <div id="navSelection" class="header-mid">
+      <a href="index.html" class="selection"><span>Home</span></a>
+      <a class="selection" onclick="renderTvShows()"><span>TV Series</span></a>
+      <a class="selection" onclick="renderMovies()"><span>Movies</span></a>
+      <a class="selection" onclick="renderTopImdb()"><span>Top IMDB</span></a>
+      <a class="selection" onclick="renderFavouriteMovies()"><span>Favourite</span></a>
     </div>
     <div class="header-right">
-      <div class="searchbar animate__animated animate__fadeInRight">
-        <input type="checkbox" id="check" style="width: 50px; height: 50px;">
+      <div id="searchBar" class="searchbar animate__animated animate__fadeInRight">
+        <input type="checkbox" id="check" style="width: 50px; height: 50px" />
         <div class="search-box">
-          <input type="text" placeholder="Type here..." id="searchInput">
+          <input type="text" placeholder="Type here..." id="searchInput" />
           <label for="check" class="icon">
             <i class="fa-solid fa-magnifying-glass emoji"></i>
           </label>
         </div>
       </div>
-      <div id="dropdownAccount" class="dropdown is-signin animate__animated animate__fadeInRight">
-        <button id="accountBtn" class="dropdown-account dropdown-toggle" type="button" id="dropdownMenuButton1"
-          data-bs-toggle="dropdown" aria-expanded="false">
+      <div id="dropdownAccount" class="dropdown is-signin">
+        <button class="dropdown-account dropdown-toggle animate__animated animate__fadeInRight" type="button"
+          id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="#"><i class="fa-solid fa-sliders"></i>Settings</a></li>
-          <li><a id="logoutBtn" class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i>Log Out</a>
+          <li><a class="dropdown-item" href="#">Settings</a></li>
+          <li>
+            <a id="logoutBtn" class="dropdown-item" href="#">Log Out</a>
           </li>
         </ul>
       </div>
-      <a id="signinBtnDropdown" class="is-signin animate__animated animate__fadeInRight" href="signin.html"
-        style="text-decoration: none;">
+      <a id="signinBtnDropdown" class="is-signin" href="signin.html" style="text-decoration: none">
         <div class="sign-in_btn">
           <p>Sign In</p>
         </div>
@@ -60,383 +61,31 @@
     </div>
   </div>
 
-  <div class="web_container">
-    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <video autoplay muted loop class="d-block">
-            <source src="./videos/topgun.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="carousel-caption d-none d-md-block">
-            <h1 class="animate__animated animate__zoomIn">TOP GUN: MAVERICK</h1>
-            <div class="carousel-movie_outer  d-none d-md-block">
-              <div class="carousel-movie_inner animate__animated animate__fadeInLeft">
-                <p>By Joseph Kosinski</p>
-              </div>
-              <div class="carousel-movie_inner animate__animated animate__fadeInUp">
-                <p>2022</p>
-              </div>
-              <div class="carousel-movie_inner animate__animated animate__fadeInRight">
-                <p>2h 10m</p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-decor">
-            <h3>WHAT'S ON THE SCREEN?</h3>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-            data-bs-slide="prev">
-            <i class="fa-solid fa-arrow-left-long"></i>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-            data-bs-slide="next">
-            <i class="fa-solid fa-arrow-right-long"></i>
-            <span class="visually-hidden">Next</span>
-          </button>
-          <div class="carousel-watch_btn">
-            <p>WATCH NOW!</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <video autoplay muted loop class="d-block">
-            <source src="./videos/heartofstone.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="carousel-caption d-none d-md-block">
-            <h1 class="animate__animated animate__zoomIn">HEART OF STONE</h1>
-            <div class="carousel-movie_outer  d-none d-md-block">
-              <div class="carousel-movie_inner animate__animated animate__fadeInLeft">
-                <p>By Tom Harper</p>
-              </div>
-              <div class="carousel-movie_inner animate__animated animate__fadeInUp">
-                <p>2023</p>
-              </div>
-              <div class="carousel-movie_inner animate__animated animate__fadeInRight">
-                <p>2h 2m</p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-decor">
-            <h3>WHAT'S ON THE SCREEN?</h3>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-            data-bs-slide="prev">
-            <i class="fa-solid fa-arrow-left-long"></i>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-            data-bs-slide="next">
-            <i class="fa-solid fa-arrow-right-long"></i>
-            <span class="visually-hidden">Next</span>
-          </button>
-          <div class="carousel-watch_btn">
-            <p>WATCH NOW!</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <video autoplay muted loop class="d-block">
-            <source src="./videos/theuncannycounter.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="carousel-caption d-none d-md-block">
-            <h1 class="animate__animated animate__zoomIn">The Uncanny Counter</h1>
-            <div class="carousel-movie_outer  d-none d-md-block">
-              <div class="carousel-movie_inner animate__animated animate__fadeInLeft">
-                <p>By Yoo Seon-dong</p>
-              </div>
-              <div class="carousel-movie_inner animate__animated animate__fadeInUp">
-                <p>2023</p>
-              </div>
-              <div class="carousel-movie_inner animate__animated animate__fadeInRight">
-                <p>2 Season</p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-decor">
-            <h3>WHAT'S ON THE SCREEN?</h3>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-            data-bs-slide="prev">
-            <i class="fa-solid fa-arrow-left-long"></i>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-            data-bs-slide="next">
-            <i class="fa-solid fa-arrow-right-long"></i>
-            <span class="visually-hidden">Next</span>
-          </button>
-          <div class="carousel-watch_btn">
-            <p>WATCH NOW!</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <video autoplay muted loop class="d-block">
-            <source src="./videos/jujustsukaisen.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="carousel-caption d-none d-md-block">
-            <h1 class="animate__animated animate__zoomIn">Jujutsu Kaisen</h1>
-            <div class="carousel-movie_outer  d-none d-md-block">
-              <div class="carousel-movie_inner animate__animated animate__fadeInLeft">
-                <p>By Akutami Gege</p>
-              </div>
-              <div class="carousel-movie_inner animate__animated animate__fadeInUp">
-                <p>2023</p>
-              </div>
-              <div class="carousel-movie_inner animate__animated animate__fadeInRight">
-                <p>2 Season</p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-decor">
-            <h3>WHAT'S ON THE SCREEN?</h3>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-            data-bs-slide="prev">
-            <i class="fa-solid fa-arrow-left-long"></i>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-            data-bs-slide="next">
-            <i class="fa-solid fa-arrow-right-long"></i>
-            <span class="visually-hidden">Next</span>
-          </button>
-          <div class="carousel-watch_btn">
-            <p>WATCH NOW!</p>
-          </div>
-        </div>
+  <div id="mainContainer" class="main_container">
+
+  </div>
+
+  <div id="toast" class="toast align-items-center text-white border-0" role="alert" aria-live="assertive"
+    aria-atomic="true"
+    style=" width: 250px; position: fixed; top: 80px; right: 0; z-index: 11; margin: 20px; z-index: 100;">
+    <div class="d-flex">
+      <div id="toast-content" class="toast-body">
+        Hello, world! This is a toast message.
       </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+        aria-label="Close"></button>
     </div>
-    <div id="tvShows" class="tvshows-outer">
-      <div class="tvshows-inner">
-        <div class="tvshows-toptrend_outer">
-          <h2>TV Shows</h2>
-          <div class="tvshows-toptrend_header">
-            <h4>Now Playing</h4>
-            <div class="tvshows-toptrend_btn">
-              <button id="moviePrev" class="" type="button">
-                <i class="fa-solid fa-chevron-left"></i>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button id="movieNext" class="" type="button">
-                <i class="fa-solid fa-chevron-right"></i>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-          <div class="tvshows-toptrend_wrapper">
-            <div id="tvshows-toptrend_item1" class="tvshows-toptrend_item_outer">
-              <div class="tvshows-toptrend_item">
-                <div class="tvshows-toptrend_img">
-                  <img src="./image/tvshows1.jpg" alt="">
-                </div>
-                <div class="tvshows-toptrend_info">
-                  <h5>The Uncanny Counter 2</h5>
-                  <p>2023</p>
-                </div>
-                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
-              </div>
-              <div class="tvshows-toptrend_item">
-                <div class="tvshows-toptrend_img">
-                  <img src="./image/tvshows1.jpg" alt="">
-                </div>
-                <div class="tvshows-toptrend_info">
-                  <h5>The Uncanny Counter 2</h5>
-                  <p>2023</p>
-                </div>
-                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
-              </div>
-              <div class="tvshows-toptrend_item">
-                <div class="tvshows-toptrend_img">
-                  <img src="./image/tvshows1.jpg" alt="">
-                </div>
-                <div class="tvshows-toptrend_info">
-                  <h5>The Uncanny Counter 2</h5>
-                  <p>2023</p>
-                </div>
-                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
-              </div>
-              <div class="tvshows-toptrend_item">
-                <div class="tvshows-toptrend_img">
-                  <img src="./image/tvshows1.jpg" alt="">
-                </div>
-                <div class="tvshows-toptrend_info">
-                  <h5>The Uncanny Counter 2</h5>
-                  <p>2023</p>
-                </div>
-                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
-              </div>
-            </div>
-            <div id="tvshows-toptrend_item2" class="tvshows-toptrend_item_outer">
-              <div class="tvshows-toptrend_item">
-                <div class="tvshows-toptrend_img">
-                  <img src="./image/tvshows1.jpg" alt="">
-                </div>
-                <div class="tvshows-toptrend_info">
-                  <h5>The Uncanny Counter 2</h5>
-                  <p>2023</p>
-                </div>
-                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
-              </div>
-              <div class="tvshows-toptrend_item">
-                <div class="tvshows-toptrend_img">
-                  <img src="./image/tvshows1.jpg" alt="">
-                </div>
-                <div class="tvshows-toptrend_info">
-                  <h5>The Uncanny Counter 2</h5>
-                  <p>2023</p>
-                </div>
-                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
-              </div>
-              <div class="tvshows-toptrend_item">
-                <div class="tvshows-toptrend_img">
-                  <img src="./image/tvshows1.jpg" alt="">
-                </div>
-                <div class="tvshows-toptrend_info">
-                  <h5>The Uncanny Counter 2</h5>
-                  <p>2023</p>
-                </div>
-                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
-              </div>
-              <div class="tvshows-toptrend_item">
-                <div class="tvshows-toptrend_img">
-                  <img src="./image/tvshows1.jpg" alt="">
-                </div>
-                <div class="tvshows-toptrend_info">
-                  <h5>The Uncanny Counter 2</h5>
-                  <p>2023</p>
-                </div>
-                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-        <div class="tvshows-toptrend_outer">
-          <div class="tvshows-toptrend_header">
-            <h4>Now Playing</h4>
-            <div class="tvshows-toptrend_btn">
-              <button id="moviePrev" class="" type="button">
-                <i class="fa-solid fa-chevron-left"></i>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button id="movieNext" class="" type="button">
-                <i class="fa-solid fa-chevron-right"></i>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-          <div class="tvshows-toptrend_wrapper">
-            <div id="tvshows-toptrend_item1" class="tvshows-toptrend_item_outer">
-              <div class="tvshows-toptrend_item">
-                <div class="tvshows-toptrend_img">
-                  <img src="./image/tvshows1.jpg" alt="">
-                </div>
-                <div class="tvshows-toptrend_info">
-                  <h5>The Uncanny Counter 2</h5>
-                  <p>2023</p>
-                </div>
-                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
-              </div>
-              <div class="tvshows-toptrend_item">
-                <div class="tvshows-toptrend_img">
-                  <img src="./image/tvshows1.jpg" alt="">
-                </div>
-                <div class="tvshows-toptrend_info">
-                  <h5>The Uncanny Counter 2</h5>
-                  <p>2023</p>
-                </div>
-                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
-              </div>
-              <div class="tvshows-toptrend_item">
-                <div class="tvshows-toptrend_img">
-                  <img src="./image/tvshows1.jpg" alt="">
-                </div>
-                <div class="tvshows-toptrend_info">
-                  <h5>The Uncanny Counter 2</h5>
-                  <p>2023</p>
-                </div>
-                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
-              </div>
-              <div class="tvshows-toptrend_item">
-                <div class="tvshows-toptrend_img">
-                  <img src="./image/tvshows1.jpg" alt="">
-                </div>
-                <div class="tvshows-toptrend_info">
-                  <h5>The Uncanny Counter 2</h5>
-                  <p>2023</p>
-                </div>
-                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
-              </div>
-            </div>
-            <div id="tvshows-toptrend_item2" class="tvshows-toptrend_item_outer">
-              <div class="tvshows-toptrend_item">
-                <div class="tvshows-toptrend_img">
-                  <img src="./image/tvshows1.jpg" alt="">
-                </div>
-                <div class="tvshows-toptrend_info">
-                  <h5>The Uncanny Counter 2</h5>
-                  <p>2023</p>
-                </div>
-                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
-              </div>
-              <div class="tvshows-toptrend_item">
-                <div class="tvshows-toptrend_img">
-                  <img src="./image/tvshows1.jpg" alt="">
-                </div>
-                <div class="tvshows-toptrend_info">
-                  <h5>The Uncanny Counter 2</h5>
-                  <p>2023</p>
-                </div>
-                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
-              </div>
-              <div class="tvshows-toptrend_item">
-                <div class="tvshows-toptrend_img">
-                  <img src="./image/tvshows1.jpg" alt="">
-                </div>
-                <div class="tvshows-toptrend_info">
-                  <h5>The Uncanny Counter 2</h5>
-                  <p>2023</p>
-                </div>
-                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
-              </div>
-              <div class="tvshows-toptrend_item">
-                <div class="tvshows-toptrend_img">
-                  <img src="./image/tvshows1.jpg" alt="">
-                </div>
-                <div class="tvshows-toptrend_info">
-                  <h5>The Uncanny Counter 2</h5>
-                  <p>2023</p>
-                </div>
-                <button class="tvshows-toptrend_watchbtn" type="button">Watch</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- <div class="tvshows-toptrend_outer">
-        <h3>Action</h3>
-        <div class="tvshows-toptrend_wrapper">
-          <div class="tvshows-toptrend_item">
-            
-          </div>
-        </div>
-      </div> -->
-    </div>
-    <div class="movies-outer">
-
-    </div>
+  </div>
 
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-firestore-compat.js"></script>
+
 <script type="module" src="./js/index.js"></script>
+<script src="./js/render.js"></script>
 <script type="module" src="./js/main.js"></script>
-<script src="./js/scroll.js"></script>
 
 </html>

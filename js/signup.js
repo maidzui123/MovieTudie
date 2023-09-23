@@ -3,8 +3,17 @@ import {
   createUserWithEmailAndPassword,
   updateProfile
 } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
-
+import {
+  collection,
+  onSnapshot,
+  query,
+  addDoc,
+  doc,
+  setDoc,
+  getDoc,
+} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
 import Toasty from "./toast.js";
+import db from "./index.js"
 
 const signUpEmail = document.getElementById("signup-email");
 const signUpUsername = document.getElementById("signup-username");
@@ -49,6 +58,8 @@ signUpBtn.addEventListener("click", (e) => {
           displayName: signUpUsername.value
         }).then(() => {
           async function signUp() {
+            console.log(user.uid)
+            await setDoc(doc(db, "Users", user.uid), dataUser);
             signUpToast.showAlert("Register Successful!", "green")
             await new Promise(resolve => setTimeout(resolve, 1000));
             window.location.href = 'signin.html'
